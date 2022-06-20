@@ -27,11 +27,13 @@ public class LoginSteps {
 
 		driver.navigate().to("https://www.parashop.tn/");
 		driver.findElement(By.xpath("//a[contains(@href,'javascript:open_login_popup()')]")).click();
+		
 	}
 
 	@When("user enters E-mail and password")
 	public void user_enters_e_mail_and_password() {
 		System.out.println("Inside Step - user enters E-mail and password");
+		
 		driver.findElement(By.id("//*[@id=\"input-email\"]")).sendKeys("test.academy1@yahoo.com");
 		driver.findElement(By.id("input-password")).sendKeys("Test123");
 		}
